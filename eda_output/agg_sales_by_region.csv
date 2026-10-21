@@ -1,0 +1,50 @@
+Region,State,sum,count,mean
+Central,Illinois,79236.52,483,164.05
+Central,Indiana,48718.4,135,360.88
+Central,Iowa,4443.56,26,170.91
+Central,Kansas,2914.31,24,121.43
+Central,Michigan,76136.07,253,300.93
+Central,Minnesota,29863.15,89,335.54
+Central,Missouri,22205.15,66,336.44
+Central,Nebraska,7464.93,38,196.45
+Central,North Dakota,919.91,7,131.42
+Central,Oklahoma,19683.39,66,298.23
+Central,South Dakota,1315.56,12,109.63
+Central,Texas,168572.53,973,173.25
+Central,Wisconsin,31173.43,105,296.89
+East,Connecticut,13384.36,82,163.22
+East,Delaware,27323.0,93,293.8
+East,District of Columbia,2865.02,10,286.5
+East,Maine,1270.53,8,158.82
+East,Maryland,23705.52,105,225.77
+East,Massachusetts,28634.43,135,212.11
+East,New Hampshire,7292.52,27,270.09
+East,New Jersey,34610.97,122,283.7
+East,New York,306361.15,1097,279.27
+East,Ohio,75130.35,454,165.49
+East,Pennsylvania,116276.65,582,199.79
+East,Rhode Island,22525.03,55,409.55
+East,Vermont,8929.37,11,811.76
+East,West Virginia,1209.82,4,302.46
+South,Alabama,19510.64,61,319.85
+South,Arkansas,11678.13,60,194.64
+South,Florida,88436.53,373,237.1
+South,Georgia,48219.11,177,272.42
+South,Kentucky,36458.39,137,266.12
+South,Louisiana,9131.05,41,222.71
+South,Mississippi,10771.34,53,203.23
+South,North Carolina,55165.96,247,223.34
+South,South Carolina,8481.71,42,201.95
+South,Tennessee,30661.87,183,167.55
+South,Virginia,70636.72,224,315.34
+West,Arizona,35272.66,223,158.17
+West,California,446306.46,1946,229.35
+West,Colorado,31841.6,179,177.89
+West,Idaho,4382.49,21,208.69
+West,Montana,5589.35,15,372.62
+West,Nevada,16729.1,39,428.95
+West,New Mexico,4783.52,37,129.28
+West,Oregon,17284.46,122,141.68
+West,Utah,11220.06,53,211.7
+West,Washington,135206.85,504,268.27
+West,Wyoming,1603.14,1,1603.14

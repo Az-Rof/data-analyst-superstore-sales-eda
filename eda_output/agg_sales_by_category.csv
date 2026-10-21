@@ -1,0 +1,18 @@
+Category,Sub-Category,sum,count,mean
+Furniture,Bookcases,113813.2,226,503.6
+Furniture,Chairs,322822.73,607,531.83
+Furniture,Furnishings,89212.02,931,95.82
+Furniture,Tables,202810.63,314,645.89
+Office Supplies,Appliances,104618.4,459,227.93
+Office Supplies,Art,26705.41,785,34.02
+Office Supplies,Binders,200028.78,1492,134.07
+Office Supplies,Envelopes,16128.05,248,65.03
+Office Supplies,Fasteners,3001.96,214,14.03
+Office Supplies,Labels,12347.73,357,34.59
+Office Supplies,Paper,76828.3,1338,57.42
+Office Supplies,Storage,219343.39,832,263.63
+Office Supplies,Supplies,46420.31,184,252.28
+Technology,Accessories,164186.7,756,217.18
+Technology,Copiers,146248.09,66,2215.88
+Technology,Machines,189238.63,115,1645.55
+Technology,Phones,327782.45,876,374.18

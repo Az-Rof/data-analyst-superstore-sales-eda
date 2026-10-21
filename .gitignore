@@ -1,0 +1,17 @@
+# Environments
+.venv/
+venv/
+
+# Data (re-downloadable from Kaggle)
+train.csv
+
+# Python
+__pycache__/
+*.pyc
+
+# Jupyter
+.ipynb_checkpoints/
+
+# OS / editor
+Thumbs.db
+.DS_Store

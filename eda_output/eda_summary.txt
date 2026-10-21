@@ -1,0 +1,138 @@
+
+==============================================================================
+ EDA SUPERSTORE SALES
+==============================================================================
+Sumber data : E:\Project\data-analyst-\train.csv
+Output dir  : E:\Project\data-analyst-\eda_output
+
+==============================================================================
+ 1. OVERVIEW DATASET
+==============================================================================
+Jumlah baris (line-item transaksi) : 9,800
+Jumlah kolom                       : 23
+Rentang Order Date                 : 03 Jan 2015 s/d 30 Dec 2018
+Jumlah Order ID unik               : 4,922
+Jumlah pelanggan unik              : 793
+Jumlah produk unik                 : 1,861
+Total Sales                        : USD 2,261,536.78
+
+Struktur kolom (nama, tipe data, contoh nilai):
+  - Row ID               int64        contoh: 1
+  - Order ID             str          contoh: CA-2017-152156
+  - Order Date           datetime64[us] contoh: 2017-11-08 00:00:00
+  - Ship Date            datetime64[us] contoh: 2017-11-11 00:00:00
+  - Ship Mode            str          contoh: Second Class
+  - Customer ID          str          contoh: CG-12520
+  - Customer Name        str          contoh: Claire Gute
+  - Segment              str          contoh: Consumer
+  - Country              str          contoh: United States
+  - City                 str          contoh: Henderson
+  - State                str          contoh: Kentucky
+  - Postal Code          float64      contoh: 42420.0
+  - Region               str          contoh: South
+  - Product ID           str          contoh: FUR-BO-10001798
+  - Category             str          contoh: Furniture
+  - Sub-Category         str          contoh: Bookcases
+  - Product Name         str          contoh: Bush Somerset Collection Bookcase
+  - Sales                float64      contoh: 261.96
+  - Order Year           int32        contoh: 2017
+  - Order Month          int32        contoh: 11
+  - Month Name           str          contoh: Nov
+  - Order Quarter        str          contoh: 2017Q4
+  - Shipping Days        int64        contoh: 3
+
+==============================================================================
+ 2. KUALITAS DATA
+==============================================================================
+Kolom dengan missing value:
+  - Postal Code             11 baris (0.11%)
+Baris duplikat penuh                : 0
+Baris duplikat (tanpa Row ID)       : 1
+Ship Date lebih awal dari Order Date: 0
+
+Statistik Sales:
+  Min    : USD 0.44
+  Max    : USD 22,638.48
+  Mean   : USD 230.77
+  Median : USD 54.49
+  Std    : USD 626.65
+
+==============================================================================
+ 3. RINGKASAN STATISTIK KOLOM NUMERIK
+==============================================================================
+                count      mean       std      min       25%       50%      75%       max
+Postal Code    9789.0  55273.32  32041.22  1040.00  23223.00  58103.00  90008.0  99301.00
+Sales          9800.0    230.77    626.65     0.44     17.25     54.49    210.6  22638.48
+Shipping Days  9800.0      3.96      1.75     0.00      3.00      4.00      5.0      7.00
+
+==============================================================================
+ 4. RINGKASAN KOLOM KATEGORIKAL
+==============================================================================
+  - Ship Mode     unik:   4 | Standard Class (5,859), Second Class (1,902), First Class (1,501), Same Day (538)
+  - Segment       unik:   3 | Consumer (5,101), Corporate (2,953), Home Office (1,746)
+  - Country       unik:   1 | United States (9,800)
+  - Region        unik:   4 | West (3,140), East (2,785), Central (2,277), South (1,598)
+  - Category      unik:   3 | Office Supplies (5,909), Furniture (2,078), Technology (1,813)
+  - Sub-Category  unik:  17 | Binders (1,492), Paper (1,338), Furnishings (931), Phones (876), Storage (832)
+
+==============================================================================
+ 5. VISUALISASI (file PNG di folder eda_output/)
+==============================================================================
+
+==============================================================================
+ 6. ANALISIS TIME SERIES
+==============================================================================
+Penjualan per tahun:
+  2015 : USD     479,856.21   (YoY -)
+  2016 : USD     459,436.01   (YoY -4.3%)
+  2017 : USD     600,192.55   (YoY +30.6%)
+  2018 : USD     722,052.02   (YoY +20.3%)
+Bulan tertinggi      : Nov 2018 (USD 117,938.15)
+Bulan terendah       : Feb 2015 (USD 4,519.89)
+Rata-rata per bulan  : USD 47,115.35
+Kuartal terbaik      : 2018Q4 (USD 278,416.67)
+
+==============================================================================
+ 7. ANALISIS PENGIRIMAN
+==============================================================================
+                transaksi  total_sales  rata_sales  rata_hari_kirim
+Ship Mode                                                          
+First Class          1501    345572.26      230.23             2.18
+Same Day              538    125219.04      232.75             0.04
+Second Class         1902    449914.18      236.55             3.25
+Standard Class       5859   1340831.31      228.85             5.01
+
+==============================================================================
+ 8. PELANGGAN & PRODUK
+==============================================================================
+Jumlah pelanggan                : 793
+Kontribusi Top-10 pelanggan     : 6.8% dari total sales
+Median sales per pelanggan      : USD 2,215.00
+
+Top 5 pelanggan:
+  - Sean Miller               USD    25,043.05 (15 transaksi)
+  - Tamara Chand              USD    19,052.22 (12 transaksi)
+  - Raymond Buch              USD    15,117.34 (18 transaksi)
+  - Tom Ashbrook              USD    14,595.62 (10 transaksi)
+  - Adrian Barton             USD    14,473.57 (20 transaksi)
+
+Top 5 produk:
+  - Canon imageCLASS 2200 Advanced Copier                   USD    61,599.82 (5x terjual)
+  - Fellowes PB500 Electric Punch Plastic Comb Binding M... USD    27,453.38 (10x terjual)
+  - Cisco TelePresence System EX90 Videoconferencing Unit   USD    22,638.48 (1x terjual)
+  - HON 5400 Series Task Chairs for Big and Tall            USD    21,870.58 (8x terjual)
+  - GBC DocuBind TL300 Electric Binding System              USD    19,823.48 (11x terjual)
+
+==============================================================================
+ KESIMPULAN & INSIGHT UTAMA
+==============================================================================
+- Kategori terlaris          : Technology
+- Sub-kategori terlaris      : Phones
+- Region dengan sales terbesar: West
+- State dengan sales terbesar : California
+- Kota dengan sales terbesar  : New York City (New York)
+- Pertumbuhan tahun terakhir  : +20.3% (2017 -> 2018)
+- Puncak musiman             : November 2018 (USD 117,938.15)
+- Konsentrasi pelanggan      : Top-10 pelanggan menyumbang 6.8% total sales
+- Distribusi Sales           : sangat right-skewed, mayoritas transaksi bernilai kecil dengan sejumlah outlier besar
+  (median jauh di bawah mean - lihat grafik 01)
